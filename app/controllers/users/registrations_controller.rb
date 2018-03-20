@@ -11,8 +11,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
+    @str = "hoge"     # superの上に書くのがミソ
     super
-    @str = "hoge"
   end
 
   # POST /resource

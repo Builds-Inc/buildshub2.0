@@ -5,13 +5,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /
-  def index
-    super
-  end
+  # def index
+  #   super
+  # end
 
   # GET /resource/sign_up
   def new
-    @str = "hoge"     # superの上に書くのがミソ
+    @str = "sign up"     # superの上に書くのがミソ
     super
   end
 
@@ -44,7 +44,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
@@ -57,9 +57,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    # @str = "Successfully signed up"
+    root_path
+    super(resource)
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)

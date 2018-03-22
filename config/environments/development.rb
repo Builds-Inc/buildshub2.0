@@ -31,6 +31,21 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  # default_url_optionsの設定
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :letter_opener_web
+
+  # SMTPサーバーの設定
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "mail.builds.ventures",
+    :port => 465,
+    :domain => 'mail.builds.ventures',
+    :user_name => "info@builds.ventures",
+    :password => "buildsspirit",
+    :authentication => 'login',
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

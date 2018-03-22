@@ -2711,3 +2711,1145 @@ Processing by LandingController#index as HTML
 Completed 200 OK in 63ms (Views: 56.1ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (15.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT GET_LOCK('704543562095177280', 0)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('704543562095177280')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:09:16 +0900
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 442ms (Views: 427.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:09:25 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (134.8ms)
+Completed 200 OK in 273ms (Views: 181.4ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:09:35 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l1CO4gjBxMBXBDQhjHZhVuwATcMhCVhQ0kmrBr482CSgn4ok9qW5IC64uakbKOYviBUocVFU5QpmdNnDopiTUQ==", "user"=>{"email"=>"aaa@aaa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'aaa@aaa' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-22 09:09:36', `last_sign_in_at` = '2018-03-22 08:42:03', `sign_in_count` = 7, `updated_at` = '2018-03-22 09:09:36' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 255ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:09:36 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-22 18:09:43 +0900
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9977QtmrdCQj0fom2JVUVtZb1POzCOvTg0jx5pAhv2x5/1VYsTHKp9b66raUtDGH1zAnW6J0hJ3/1s8LaZsY+Q=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:09:43 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:11:21 +0900
+Processing by LandingController#index as HTML
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:11:22 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (16.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 435ms (Views: 220.6ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:12:32 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 104ms (Views: 75.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:12:38 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:12:43 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 100ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:12:50 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKQ1HErT0nrLrw5WdxEQ7409QmLnihBYJNNeBiDdtteuabKkzRO7OWSbSopCLSCMAvXDpB7efA4uCm97qGOLtA==", "user"=>{"email"=>"aaa@aaa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'aaa@aaa' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-22 09:12:50', `last_sign_in_at` = '2018-03-22 09:09:36', `sign_in_count` = 8, `updated_at` = '2018-03-22 09:12:50' WHERE `users`.`id` = 1[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 198ms (ActiveRecord: 27.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:12:51 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:24:46 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (157.1ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `confirmed_at' for #<User:0x007fa132d5e550>
+Did you mean?  confirmed?):
+     5: </script>
+     6: 
+     7: <%= link_to '新規登録', new_user_registration_path %>
+     8: <% if user_signed_in? %>
+     9:   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    10: <% else %>
+    11:   <%= link_to 'ログイン', new_user_session_path %>
+  
+app/views/landing/index.html.erb:8:in `_app_views_landing_index_html_erb___3197405230342235940_70165122432100'
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:25:47 +0900
+  [1m[35m (11.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (60.6ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 10.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `confirmed_at' for #<User:0x007fca4d96b8a0>
+Did you mean?  confirmed?):
+     5: </script>
+     6: 
+     7: <%= link_to '新規登録', new_user_registration_path %>
+     8: <% if user_signed_in? %>
+     9:   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    10: <% else %>
+    11:   <%= link_to 'ログイン', new_user_session_path %>
+  
+app/views/landing/index.html.erb:8:in `_app_views_landing_index_html_erb__3338756452739961653_70253431216440'
+  [1m[35m (3.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT GET_LOCK('704543562095177280', 0)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('704543562095177280')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:26:15 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (60.4ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `confirmed_at' for #<User:0x007f9554f87820>
+Did you mean?  confirmed?):
+     5: </script>
+     6: 
+     7: <%= link_to '新規登録', new_user_registration_path %>
+     8: <% if user_signed_in? %>
+     9:   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    10: <% else %>
+    11:   <%= link_to 'ログイン', new_user_session_path %>
+  
+app/views/landing/index.html.erb:8:in `_app_views_landing_index_html_erb__2085655726543235148_70139671248700'
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:27:07 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (93.0ms)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `confirmed_at' for #<User:0x007f955622e118>
+Did you mean?  confirmed?):
+     5: </script>
+     6: 
+     7: <%= link_to '新規登録', new_user_registration_path %>
+     8: <!-- <% if user_signed_in? %> -->
+     9:   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    10: <!-- <% else %> -->
+    11:   <%= link_to 'ログイン', new_user_session_path %>
+  
+app/views/landing/index.html.erb:8:in `_app_views_landing_index_html_erb__2085655726543235148_70139685206400'
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:27:25 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 359ms (Views: 354.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:27:31 +0900
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (undefined local variable or method `confirmed_at' for #<User:0x007f9555743d98>
+Did you mean?  confirmed?):
+  
+activemodel (5.1.5) lib/active_model/attribute_methods.rb:432:in `method_missing'
+devise (4.4.3) lib/devise/models/confirmable.rb:107:in `confirmed?'
+devise (4.4.3) lib/devise/models/confirmable.rb:188:in `confirmation_required?'
+devise (4.4.3) lib/devise/models/confirmable.rb:145:in `active_for_authentication?'
+devise (4.4.3) lib/devise/hooks/activatable.rb:7:in `block in <top (required)>'
+warden (1.2.7) lib/warden/hooks.rb:15:in `block in _run_callbacks'
+warden (1.2.7) lib/warden/hooks.rb:10:in `each'
+warden (1.2.7) lib/warden/hooks.rb:10:in `_run_callbacks'
+warden (1.2.7) lib/warden/manager.rb:52:in `_run_callbacks'
+warden (1.2.7) lib/warden/proxy.rb:180:in `set_user'
+warden (1.2.7) lib/warden/proxy.rb:218:in `user'
+warden (1.2.7) lib/warden/proxy.rb:323:in `_perform_authentication'
+warden (1.2.7) lib/warden/proxy.rb:105:in `authenticate'
+warden (1.2.7) lib/warden/proxy.rb:115:in `authenticate?'
+devise (4.4.3) app/controllers/devise_controller.rb:109:in `require_no_authentication'
+activesupport (5.1.5) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.5) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.5) lib/active_support/callbacks.rb:179:in `block in halting_and_conditional'
+activesupport (5.1.5) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.5) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.5) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.5) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.5) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.5) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.5) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:29:43 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (44.4ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `confirmed_at' for #<User:0x007f95586d9788>
+Did you mean?  confirmed?):
+     5: </script>
+     6: 
+     7: <%= link_to '新規登録', new_user_registration_path %>
+     8: <% if user_signed_in? %>
+     9:   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    10: <% else %>
+    11:   <%= link_to 'ログイン', new_user_session_path %>
+  
+app/views/landing/index.html.erb:8:in `_app_views_landing_index_html_erb__2085655726543235148_70139705187580'
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('704543562095177280', 0)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('704543562095177280')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('704543562095177280', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20180320172921)
+  [1m[35m (172.6ms)[0m  [1m[35mDROP INDEX `index_users_on_reset_password_token` ON `users`[0m
+  [1m[35m (32.7ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  [1m[35m (26.7ms)[0m  [1m[35mDROP TABLE `users`[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180320172921'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('704543562095177280')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('704543562095177280', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20180320172921)
+  [1m[35m (52.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `unconfirmed_email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180320172921')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('704543562095177280')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:32:54 +0900
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 215ms (Views: 202.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:32:58 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 104ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 18:33:21 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T8SHiDJ30epTc1w0IQf/t0FnHaiYXasWyF1/qzCHWY2pERC193GimXPJrT4LaSkFrmoFViGMS9glFFCuIomYeQ==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'gawapei333@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('gawapei333@gmail.com', '$2a$11$RN.pSJKdzZdF0XQNUO4.kuBuREhxjwvB/q0ag/A7wrW70NwRw2LDK', 'R8_Ne5qyih2cSmDjubee', '2018-03-22 09:33:21', '2018-03-22 09:33:21', '2018-03-22 09:33:21')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (0.9ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 378.2ms
+Sent mail to gawapei333@gmail.com (144.2ms)
+Date: Thu, 22 Mar 2018 18:33:22 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab378625db11_14e6a3fe42c7eeb183883f@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=R8_Ne5qyih2cSmDjubee">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1136ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:33:22 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:35:12 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 230ms (Views: 208.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:35:22 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ySqpOGkhQ0iSSL7eLgAc5ma3fKwWo+7fvxTfQBWoQQlJ4mEDsh4LqfX2n6gDdj4JIfMmar9rn9/4PPVakJGYsg==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'gawapei333@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 158ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:35:22 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2018-03-22 18:36:02 +0900
+Processing by Users::ConfirmationsController#new as HTML
+  Rendering users/confirmations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/confirmations/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 91ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2018-03-22 18:36:10 +0900
+Processing by Users::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yh8GYkiKTimxmVDNe81Alx9ys1qmxgZfa3dkrzn5oAlnTYwUyJdtGa7bSoU1+BZg9YSpYlb03nVJisQBXmUDoQ==", "user"=>{"email"=>"gawapei333@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`unconfirmed_email` = 'gawapei333@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'gawapei333@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (1.1ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 77.5ms
+Sent mail to gawapei333@gmail.com (8.5ms)
+Date: Thu, 22 Mar 2018 18:36:10 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab3790a91b29_14e6a3fe42c7ee33438941@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=R8_Ne5qyih2cSmDjubee">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 131ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:36:10 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:39:51 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 75ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:39:55 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (6.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 90ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 18:40:31 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gk/sxAGINDd+BPY/H/rSZSKrxhLXajVKRIYfjbI9B5f8mnv5xI5HRF6+BzU1lATXzabe7G671YSpzzCIoDPGYw==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (6.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'gawapei333@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (5.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('gawapei333@gmail.com', '$2a$11$.siQxZelO4LQZu1q4j8IX.73qavG.0r37c5qPaYURMbXNmP9pPRM.', 'ch1CbVbAe_xJV9g94NDg', '2018-03-22 09:40:31', '2018-03-22 09:40:31', '2018-03-22 09:40:31')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (1.3ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 65.7ms
+Sent mail to gawapei333@gmail.com (6.8ms)
+Date: Thu, 22 Mar 2018 18:40:31 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab37a0f530f5_14e6a3fe42c7eeb18390c2@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=ch1CbVbAe_xJV9g94NDg">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 272ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:40:31 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:43:34 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (433.0ms)
+Completed 200 OK in 535ms (Views: 506.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 18:43:42 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"boQ0kAq9CTjiAzkTT5OsKHppowS5oJcs6IxQOULNUp6IUaOtz7t6S8K5yBll/XqalWS7+gBxd+IFxX88UMOTag==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'gawapei333@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('gawapei333@gmail.com', '$2a$11$HPXoRwL5QDkf68Z324YMa.KOfDBM/wdQOLT4wdcjgnpLRs7b7basC', 'b7ny_HzxUJyZsAPC4dgV', '2018-03-22 09:43:43', '2018-03-22 09:43:43', '2018-03-22 09:43:43')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (0.7ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 58.7ms
+Sent mail to gawapei333@gmail.com (6.5ms)
+Date: Thu, 22 Mar 2018 18:43:43 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab37acf31b7b_14e6a3fe42c7e7ebc3914@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=b7ny_HzxUJyZsAPC4dgV">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 234ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:43:43 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:46:01 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (8.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 97ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 18:46:09 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TgLhROL0qfdmtaRifMsv6tGwkqH1P5Uu2j2XCG7jdWOo13Z5J/LahEYPVWhWpflYPr2KX0zudeA3dLgNfO20lw==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'gawapei333@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('gawapei333@gmail.com', '$2a$11$18ZHq7TtaMVRgKhw0m2Bfe1cbkjlAPU6JzKtitQxlK.T5.lr00uim', 'ZCmZKx_is6GyvS625x1v', '2018-03-22 09:46:09', '2018-03-22 09:46:09', '2018-03-22 09:46:09')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (3.0ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 72.4ms
+Sent mail to gawapei333@gmail.com (8.9ms)
+Date: Thu, 22 Mar 2018 18:46:10 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab37b62e07d_14e6a3fe42c7ee33439221@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=ZCmZKx_is6GyvS625x1v">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 266ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:46:10 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 136ms (Views: 131.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:49:21 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (7.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 165ms (Views: 150.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 18:49:34 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GftzkmyGiO9HYn8rUj0+3lzy+tm4zn1jcXHo1Lkbc57/LuSvqYD7nGfYjiF4U+hss//iJwEfna2cOMfRqxWyag==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'gawapei333@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('gawapei333@gmail.com', '$2a$11$JXlM5NdI32OOH6jD5tgRR.Yy/7OhRGEBYaPUXyEOGYj6KELSiTTse', '6XG49yqVpMSmKXxMMUNg', '2018-03-22 09:49:34', '2018-03-22 09:49:34', '2018-03-22 09:49:34')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (1.1ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 68.0ms
+Sent mail to gawapei333@gmail.com (8.6ms)
+Date: Thu, 22 Mar 2018 18:49:34 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab37c2e66573_14e6a3fe42c7eeb183931a@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=6XG49yqVpMSmKXxMMUNg">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 261ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:49:34 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:51:52 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (10.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 248ms (Views: 183.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 18:54:00 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dAgyjtyTLQI3KN4hgzI6jVWyAwDKD/0jqFsRTqlTIHuS3aWzGZVecReSLyupXOw/ur8b/nPeHe1FEj5Lu13hjw==", "user"=>{"email"=>"jumpe123oon@ezweb.ne.jp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jumpe123oon@ezweb.ne.jp' LIMIT 1[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('jumpe123oon@ezweb.ne.jp', '$2a$11$ZO7XtS.SnPXaeUGHw5MQhuKnygjgpWATRAkom0UeE8/a.EtN2VBV2', 'fiLs5Ecmneui9Wcmw9xG', '2018-03-22 09:54:00', '2018-03-22 09:54:00', '2018-03-22 09:54:00')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (5.6ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 78.3ms
+Sent mail to jumpe123oon@ezweb.ne.jp (48.8ms)
+Date: Thu, 22 Mar 2018 18:54:00 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jumpe123oon@ezweb.ne.jp
+Message-ID: <5ab37d388eb76_14e6a3fe42c7e7ebc394a6@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome jumpe123oon@ezweb.ne.jp!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=fiLs5Ecmneui9Wcmw9xG">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 372ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:54:00 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 106ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 18:56:26 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 477ms (Views: 457.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:56:32 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (13.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 192ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 18:57:01 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (8.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 146ms (Views: 142.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 18:57:05 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (14.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 654ms (Views: 620.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 19:01:44 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (8.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 250ms (Views: 212.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:01:49 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 146ms (Views: 133.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 19:01:52 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 207ms (Views: 202.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 19:03:49 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+TF4zSH9SKpsN7QbHDtH8wEDQKwVTGYDDNG33WYNw/FMVLe8YGGUYkKL9pGHjutIwkV/AmE0VbhemnaZ5b2+w==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'gawapei333@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('gawapei333@gmail.com', '$2a$11$sUBDm9UR0nmx7OdqO9X7MOIIwlEMjX6gFRWToziiN1y5MV6ayvWnS', 'kHNAcfy1wWqJmzbVUWa7', '2018-03-22 10:03:50', '2018-03-22 10:03:50', '2018-03-22 10:03:50')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/mailer/confirmation_instructions.html.erb (9.4ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 108.9ms
+Sent mail to gawapei333@gmail.com (54.9ms)
+Date: Thu, 22 Mar 2018 19:03:50 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab37f866d0e5_14e6a3fe42c7eeb183959d@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=kHNAcfy1wWqJmzbVUWa7">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 565ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:03:50 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:09:53 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 294ms (Views: 276.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:10:18 +0900
+  [1m[35m (12.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 272ms (Views: 260.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:11:11 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 293ms (Views: 282.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:12:10 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 167ms (Views: 156.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 19:12:21 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.6ms)
+  Rendered users/registrations/new.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 416ms (Views: 297.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:12:45 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 405ms (Views: 395.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 19:14:13 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 92ms (Views: 75.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 19:14:39 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"75ov2zK/u8gI6o1Ujez1SkA29RD8vo1xcOcWjji3+fwJT7jm97nIuyhQfF6ngiP4rzvt7kVvbb+drjmLKrk4CA==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'gawapei333@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('gawapei333@gmail.com', '$2a$11$iOYip4hDlqwiuXyFg2kPyOneY60lIyZ8bsTGu1w1snrONViaLuu9m', 'xy-WjgTtMx1aLijp12bo', '2018-03-22 10:14:40', '2018-03-22 10:14:40', '2018-03-22 10:14:40')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/confirmation_instructions.html.erb
+  Rendered users/mailer/confirmation_instructions.html.erb (1.1ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 409.8ms
+Sent mail to gawapei333@gmail.com (61052.3ms)
+Date: Thu, 22 Mar 2018 19:14:40 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: gawapei333@gmail.com
+Message-ID: <5ab38210e5dc1_153e53ff796b7d0cc230a8@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome gawapei333@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=xy-WjgTtMx1aLijp12bo">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 62082ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:15:42 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:15:42 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=xy-WjgTtMx1aLijp12bo" for 127.0.0.1 at 2018-03-22 19:17:20 +0900
+Processing by Users::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"xy-WjgTtMx1aLijp12bo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'xy-WjgTtMx1aLijp12bo' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE `users` SET `confirmed_at` = '2018-03-22 10:17:20', `updated_at` = '2018-03-22 10:17:20' WHERE `users`.`id` = 8[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 19:17:20 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-22 19:17:36 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sWrq0SjdWLyrFINh8WkfFbT5TDBdWlvX9c20zilrszTppRqmfG7W3jVDTC7AXQYQSHNtA9qrYQDCYETtFSbiwA==", "user"=>{"email"=>"gawapei333@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'gawapei333@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-22 10:17:36', `last_sign_in_at` = '2018-03-22 10:17:36', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2018-03-22 10:17:36' WHERE `users`.`id` = 8[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 172ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:17:36 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/letter_opener" for 127.0.0.1 at 2018-03-22 19:23:14 +0900
+  [1m[35m (6.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (4.7ms)
+Completed 200 OK in 1190ms (Views: 1174.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:23:28 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 137ms (Views: 122.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 19:23:30 +0900
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 41ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:23:30 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 69ms (Views: 64.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 19:23:36 +0900
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:23:36 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 63ms (Views: 56.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-22 19:23:39 +0900
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ONwHOaoF7e86HBS9R9kLZ63l+gYqBZjV0FXfC+MU5PzOPHya3KVrFYuJ5zQAllhFgw7uOmdLlR4G2yde3hxhmA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:23:39 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-22 19:23:42 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 228ms (Views: 226.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-22 19:23:50 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W1FgbhovMceA8jDJuURd2pPpIiWpa32FPmw9LStAhTk6W08Bei3AV2hAxd7ok9c1v1dGAIZNwOcN+wGNzv3EFQ==", "user"=>{"email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aaa@aaa' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('aaa@aaa', '$2a$11$musiSmyrlOoC9CqwU.QuT.lgFpv6GDm7/1WVMaDi0iGC0FcupAZSu', 'RAMEyhWd-REeqBoj76wg', '2018-03-22 10:23:50', '2018-03-22 10:23:50', '2018-03-22 10:23:50')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/confirmation_instructions.html.erb
+  Rendered users/mailer/confirmation_instructions.html.erb (3.0ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 374.0ms
+Sent mail to aaa@aaa (21.4ms)
+Date: Thu, 22 Mar 2018 19:23:51 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: aaa@aaa
+Message-ID: <5ab3843765301_155013ff7ed8f2918894c3@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aaa@aaa!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=RAMEyhWd-REeqBoj76wg">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1003ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 19:23:51 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 117ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener" for 127.0.0.1 at 2018-03-22 19:24:23 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (2.6ms)
+Completed 200 OK in 46ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1521714231_421176_54280f4/rich" for 127.0.0.1 at 2018-03-22 19:24:24 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1521714231_421176_54280f4", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=RAMEyhWd-REeqBoj76wg" for 127.0.0.1 at 2018-03-22 19:24:35 +0900
+Processing by Users::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"RAMEyhWd-REeqBoj76wg"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'RAMEyhWd-REeqBoj76wg' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[33mUPDATE `users` SET `confirmed_at` = '2018-03-22 10:24:35', `updated_at` = '2018-03-22 10:24:35' WHERE `users`.`id` = 9[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 21ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-22 19:24:35 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener" for 127.0.0.1 at 2018-03-22 19:27:13 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (8.9ms)
+Completed 200 OK in 88ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1521714231_421176_54280f4/rich" for 127.0.0.1 at 2018-03-22 19:27:14 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1521714231_421176_54280f4", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.2ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=RAMEyhWd-REeqBoj76wg" for 127.0.0.1 at 2018-03-22 19:32:07 +0900
+Processing by Users::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"RAMEyhWd-REeqBoj76wg"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'RAMEyhWd-REeqBoj76wg' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/confirmations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (7.0ms)
+  Rendered users/confirmations/new.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 239ms (Views: 144.5ms | ActiveRecord: 8.3ms)
+
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  birth: 2018-03-23
+  graduate: 1
+  experience: MyText
+
+two:
+  username: MyString
+  birth: 2018-03-23
+  graduate: 1
+  experience: MyText

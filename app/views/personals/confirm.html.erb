@@ -1,0 +1,28 @@
+<%= form_for @personal do |f| %>
+  <div class="field">
+    user_id: <%= @personal.user_id %>
+    <%= f.hidden_field :user_id %>
+  </div>
+  <div class="field">
+    name: <%= @personal.name %>
+    <%= f.hidden_field :name %>
+  </div>
+  <div class="field">
+    kana: <%= @personal.kana %>
+    <%= f.hidden_field :kana %>
+  </div>
+  <div class="field">
+    sex: <%= @personal.sex %>
+    <%= f.hidden_field :sex %>
+  </div>
+  <div class="field">
+    birth: <%= @personal.birth %>
+    <%= f.hidden_field :birth %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Back!', name: 'back' %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'create!' %>
+  </div>
+<% end %>

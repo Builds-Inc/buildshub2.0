@@ -4530,3 +4530,417 @@ Processing by HomeController#mypage as HTML
 Completed 200 OK in 634ms (Views: 619.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 01:56:32 +0900
+  
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  
+mysql2 (0.4.10) lib/mysql2/client.rb:89:in `connect'
+mysql2 (0.4.10) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.5) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.5) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.5) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.5) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.5) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 01:56:58 +0900
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.6ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 350ms (Views: 333.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 01:57:00 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (1.1ms)
+  Rendered personals/new.html.erb within layouts/application (28.8ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/_form.html.erb:45: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/personals/_form.html.erb:45: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/personals/new.html.erb:3:in `_app_views_personals_new_html_erb__3090033019298856411_70263183033580'
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 01:57:54 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (144.3ms)
+  Rendered personals/new.html.erb within layouts/application (151.5ms)
+Completed 200 OK in 310ms (Views: 276.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 01:58:32 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UfTZjB+JyxMOZWV0JFcRHUXi4r5DZmBgccF/UXCbf67SBK7Gazglh/g0mZ7IN+8CVEGjHaBdTkn0x9WjwN3m3A==", "personal"=>{"user_id"=>"", "name"=>"寒川 隼平", "kana"=>"ソウガワ ジュンペイ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:5: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:9: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:10: syntax error, unexpected '<'
+  <div class="actions">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:11: syntax error, unexpected tFID, expecting ')'
+uffer.append=( f.submit 'Back!', name: 'back'  # <=戻る為
+                              ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+ f.submit 'Back!', name: 'back'  # <=戻る為のname );@out
+                              ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:12: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:15: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:16: unterminated string meets end of file
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:16: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/personals/confirm.html.erb:5: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:9: unknown regexp options - dv
+app/views/personals/confirm.html.erb:10: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:11: syntax error, unexpected tFID, expecting ')'
+app/views/personals/confirm.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/personals/confirm.html.erb:12: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:15: unknown regexp options - dv
+app/views/personals/confirm.html.erb:16: unterminated string meets end of file
+app/views/personals/confirm.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:03:07 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UfTZjB+JyxMOZWV0JFcRHUXi4r5DZmBgccF/UXCbf67SBK7Gazglh/g0mZ7IN+8CVEGjHaBdTkn0x9WjwN3m3A==", "personal"=>{"user_id"=>"", "name"=>"寒川 隼平", "kana"=>"ソウガワ ジュンペイ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:5: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:9: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:10: syntax error, unexpected '<'
+  <div class="field">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:11: syntax error, unexpected ':', expecting ')'
+    kana: '.freeze;@output_buffer.appen
+         ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:13: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:17: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:18: syntax error, unexpected '<'
+  <div class="field">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:19: syntax error, unexpected ':', expecting ')'
+    birth: '.freeze;@output_buffer.appen
+          ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:21: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:24: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:25: syntax error, unexpected '<'
+  <div class="actions">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:26: syntax error, unexpected tFID, expecting ')'
+fer.append=( f.submit 'create!' );@output_buffer.safe_append
+                              ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:27: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:27: unterminated regexp meets end of file):
+  
+app/views/personals/confirm.html.erb:5: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:9: unknown regexp options - dv
+app/views/personals/confirm.html.erb:10: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:11: syntax error, unexpected ':', expecting ')'
+app/views/personals/confirm.html.erb:13: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:17: unknown regexp options - dv
+app/views/personals/confirm.html.erb:18: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:19: syntax error, unexpected ':', expecting ')'
+app/views/personals/confirm.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:24: unknown regexp options - dv
+app/views/personals/confirm.html.erb:25: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:26: syntax error, unexpected tFID, expecting ')'
+app/views/personals/confirm.html.erb:27: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:27: unterminated regexp meets end of file
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:03:25 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UfTZjB+JyxMOZWV0JFcRHUXi4r5DZmBgccF/UXCbf67SBK7Gazglh/g0mZ7IN+8CVEGjHaBdTkn0x9WjwN3m3A==", "personal"=>{"user_id"=>"", "name"=>"寒川 隼平", "kana"=>"ソウガワ ジュンペイ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:9: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:13: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:14: syntax error, unexpected '<'
+  <div class="field">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:15: syntax error, unexpected ':', expecting ')'
+    sex: '.freeze;@output_buffer.appen
+        ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:17: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:21: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:22: syntax error, unexpected '<'
+  <div class="actions">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:23: syntax error, unexpected tFID, expecting ')'
+uffer.append=( f.submit 'Back!', name: 'back'  # <=戻る為
+                              ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+ f.submit 'Back!', name: 'back'  # <=戻る為のname );@out
+                              ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:24: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:27: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:28: unterminated string meets end of file
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:28: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/personals/confirm.html.erb:9: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:13: unknown regexp options - dv
+app/views/personals/confirm.html.erb:14: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:15: syntax error, unexpected ':', expecting ')'
+app/views/personals/confirm.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:21: unknown regexp options - dv
+app/views/personals/confirm.html.erb:22: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:23: syntax error, unexpected tFID, expecting ')'
+app/views/personals/confirm.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/personals/confirm.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:27: unknown regexp options - dv
+app/views/personals/confirm.html.erb:28: unterminated string meets end of file
+app/views/personals/confirm.html.erb:28: syntax error, unexpected end-of-input, expecting ')'
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:03:51 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UfTZjB+JyxMOZWV0JFcRHUXi4r5DZmBgccF/UXCbf67SBK7Gazglh/g0mZ7IN+8CVEGjHaBdTkn0x9WjwN3m3A==", "personal"=>{"user_id"=>"", "name"=>"寒川 隼平", "kana"=>"ソウガワ ジュンペイ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:13: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:17: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:18: syntax error, unexpected '<'
+  <div class="field">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:19: syntax error, unexpected ':', expecting ')'
+    birth: '.freeze;@output_buffer.appen
+          ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:21: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:24: unknown regexp options - dv
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:25: syntax error, unexpected '<'
+  <div class="actions">
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:26: syntax error, unexpected tFID, expecting ')'
+fer.append=( f.submit 'create!' );@output_buffer.safe_append
+                              ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:27: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/Users/jumpeisogawa/Documents/Documents/Builds/buildshub2.0/app/views/personals/confirm.html.erb:27: unterminated regexp meets end of file):
+  
+app/views/personals/confirm.html.erb:13: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:17: unknown regexp options - dv
+app/views/personals/confirm.html.erb:18: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:19: syntax error, unexpected ':', expecting ')'
+app/views/personals/confirm.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:24: unknown regexp options - dv
+app/views/personals/confirm.html.erb:25: syntax error, unexpected '<'
+app/views/personals/confirm.html.erb:26: syntax error, unexpected tFID, expecting ')'
+app/views/personals/confirm.html.erb:27: syntax error, unexpected '<', expecting ')'
+app/views/personals/confirm.html.erb:27: unterminated regexp meets end of file
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:04:36 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UfTZjB+JyxMOZWV0JFcRHUXi4r5DZmBgccF/UXCbf67SBK7Gazglh/g0mZ7IN+8CVEGjHaBdTkn0x9WjwN3m3A==", "personal"=>{"user_id"=>"", "name"=>"寒川 隼平", "kana"=>"ソウガワ ジュンペイ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 104ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:04:41 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Mjpd2hMz84AxZwILqxLWCgABNBE9aPhkx+beRNdcLxrOJ49HP0hWvaUYOLCzLVHOaNFc6fOjcgWGTGLoxvpzg==", "personal"=>{"user_id"=>"", "name"=>"寒川 隼平", "kana"=>"ソウガワ ジュンペイ", "sex"=>"1", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO `personals` (`name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES ('寒川 隼平', 'ソウガワ ジュンペイ', 1, '2018-03-26 17:04:41', '2018-03-26 17:04:41')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/personals/1
+Completed 302 Found in 21ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/personals/1" for 127.0.0.1 at 2018-03-27 02:04:41 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersonal Load (4.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 1 LIMIT 1[0m
+  Rendering personals/show.html.erb within layouts/application
+  Rendered personals/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 95ms (Views: 78.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:05:12 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:05:15 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (5.0ms)
+  Rendered personals/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 83ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:05:41 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kUMjkxoco4YZ6GaFnqTaJ0EJpUq8ewPx0U+pP475bBTfdW1kXVPIH8jOU/B1v+H3LiCCHXdGW0KgSnIf1krpXg==", "personal"=>{"user_id"=>"2", "name"=>"so", "kana"=>"ソウ", "sex"=>"2", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:06:21 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FHYebvpXexCU9PdRSY4tB07V+o8o0SzvsVYQgRIyBR+XhmkkjuaVhGKlC7ul7tMYX3a7LMvqAsY0ULpzonScbQ==", "personal"=>{"user_id"=>"2", "name"=>"so", "kana"=>"ソウ", "sex"=>"2", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (2, 'so', 'ソウ', 2, '2018-03-26 17:06:21', '2018-03-26 17:06:21')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/personals/2
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/personals/2" for 127.0.0.1 at 2018-03-27 02:06:21 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 2 LIMIT 1[0m
+  Rendering personals/show.html.erb within layouts/application
+  Rendered personals/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/letter_opener" for 127.0.0.1 at 2018-03-27 02:08:08 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (2.1ms)
+Completed 200 OK in 66ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1522051355_568713_ae8e04f/rich" for 127.0.0.1 at 2018-03-27 02:08:08 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1522051355_568713_ae8e04f", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:14:38 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mPersonal Load (1.1ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Personal with 'id'=confirm):
+  
+app/controllers/personals_controller.rb:75:in `set_personal'
+Started GET "/personals/" for 127.0.0.1 at 2018-03-27 02:14:44 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.4ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 106ms (Views: 99.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:14:46 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (13.3ms)
+  Rendered personals/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 89ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:15:21 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u2NICv3inttAuoxK3pWP7svNztNQ8cgoMQet8wMJf6b1VQb9uq31QpGcuT81jrQ+pOTphJvMkJtAAnbTW7r67A==", "personal"=>{"user_id"=>"3", "name"=>"ペー", "kana"=>"ペー", "sex"=>"1", "birth(1i)"=>"2013", "birth(2i)"=>"3", "birth(3i)"=>"12"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:15:25 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dHqk1ChD3N8NRgBgAFPy7mnA7VzZD18idHohCArkQTb3itOeXPIyS/sX/IrsMwzxeGOs/zo0cQvxfIv6uqLYRA==", "personal"=>{"user_id"=>"3", "name"=>"ペー", "kana"=>"ペー", "sex"=>"1", "birth"=>"{1=>2013, 2=>3, 3=>12}"}, "commit"=>"create!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (3, 'ペー', 'ペー', 1, '2018-03-26 17:15:25', '2018-03-26 17:15:25')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/personals/3
+Completed 302 Found in 14ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/personals/3" for 127.0.0.1 at 2018-03-27 02:15:25 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 3 LIMIT 1[0m
+  Rendering personals/show.html.erb within layouts/application
+  Rendered personals/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+
+

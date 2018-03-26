@@ -4944,3 +4944,390 @@ Processing by PersonalsController#show as HTML
 Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:19:16 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.4ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 326ms (Views: 303.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:19:18 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (43.6ms)
+  Rendered personals/new.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 116ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:19:44 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UYkViQ+qrfUkOziMcj4xJf5FttHjn4TCotWyitkmGcYfv1t+SOXGbPUdDfmZJQr1kWyRhiii3HHT0GmqgZWcjA==", "personal"=>{"user_id"=>"4", "name"=>"あがつま", "kana"=>"アガツマ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:19:46 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6lEoT63Rn9h6OPgWtM4pdumjZnFFARhmGwCFJ0tC3YlpoV8F2WBxTIxpBPxYrtdp+AAn0qY6Nk+eBi/V+wRE+w==", "personal"=>{"user_id"=>"4", "name"=>"あがつま", "kana"=>"アガツマ", "sex"=>"1", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "back"=>"Back!"}
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (3.4ms)
+  Rendered personals/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:19:51 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XOf15PzvvdPOlLa0t53skMzVa4PpokfQuiQoRGP+Bx/fF4KuiF5TRzjFSl5b/RKP3XYqIAqZafk/IoK207iebQ==", "personal"=>{"user_id"=>"4", "name"=>"あがつま", "kana"=>"アガツマ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:19:53 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Yxc8y31KtXiG0P0l5uEwfzJrzuQGUpsjs5VBuOzpstqfCu5WUTEQRRKvx57+3re7WrumHMiZEULyP/0U/U/uQ==", "personal"=>{"user_id"=>"4", "name"=>"あがつま", "kana"=>"アガツマ", "sex"=>"1", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "back"=>"Back!"}
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (3.2ms)
+  Rendered personals/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:30:11 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.6ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 313ms (Views: 292.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:30:14 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (36.5ms)
+  Rendered personals/new.html.erb within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"confirm", :controller=>"personals"}):
+    1: 
+    2: <%= form_for @personal, url: {action: 'confirm'} do |form| %>
+    3:   <% if personal.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2><%= pluralize(personal.errors.count, "error") %> prohibited this personal from being saved:</h2>
+  
+app/views/personals/_form.html.erb:2:in `_app_views_personals__form_html_erb___2991877335153966282_70248055800840'
+app/views/personals/new.html.erb:3:in `_app_views_personals_new_html_erb__752274073725256032_70248057240020'
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:30:36 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (4.2ms)
+  Rendered personals/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 57ms (Views: 42.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:35:18 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vub4m26SbJIrfaMdY8Xe6sy2/8n2l3203IK9IkDedh09Fo/RGiOCBt0sX/ePpSD13RW+ahWsU51ZhBfQ8Jjvbw==", "personal"=>{"user_id"=>"5", "name"=>"はっしー", "kana"=>"ハッシー", "sex"=>"2", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 65ms (Views: 46.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:35:22 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zdTQbHU1oOtwQQS9oQovaiTcbEEMccvRxe5bErr+jVJOJKcmAYROf4YQ+FdNatF1NX8t4u9K5fhA6PHgCrgUIA==", "personal"=>{"user_id"=>"5", "name"=>"はっしー", "kana"=>"ハッシー", "sex"=>"2", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (5, 'はっしー', 'ハッシー', 2, '2018-03-26 17:35:22', '2018-03-26 17:35:22')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/personals/4
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/personals/4" for 127.0.0.1 at 2018-03-27 02:35:22 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPersonal Load (0.7ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 4 LIMIT 1[0m
+  Rendering personals/show.html.erb within layouts/application
+  Rendered personals/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 62ms (Views: 52.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:40:03 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 64ms (Views: 54.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:40:05 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (11.5ms)
+  Rendered personals/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 95ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:40:34 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+BEBvh565PTgjT1fwQGyVRNol+NF8rgtmfx+4uveZ1S2J09JWTWPbTGrCCoqGomFfEGwtI7P4J7o+aXCs23iHg==", "personal"=>{"user_id"=>"6", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:40:37 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wxe49EjCpVkstjxElcSGrCNoRAEXHsC26E24KBG2WwTY58++PHNLzdrnwK55pHizMssFovQl7p9tSxLaofDCdg==", "personal"=>{"user_id"=>"6", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (6, 'いけぽん', 'イケポン', 6, '2018-03-26 17:40:37', '2018-03-26 17:40:37')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000home/mypage
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:40:58 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 81ms (Views: 73.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:42:46 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (4.8ms)
+  Rendered personals/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 69ms (Views: 54.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:43:07 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Esztm9vaWUoPTQzLtJmWmHAVsuCH7o6fp+Me6bkS2v1c+qNsnJUy095rOb5fgq1IHzyVt0zT1izW5sXJ4aFftw==", "personal"=>{"user_id"=>"8", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:43:08 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LXVSAAWWPGn4mh8x7JhQbtQCl4KKN7QbXkyN1WsTIxSuhSVKcSfS/Q7L49sA+K5xxaHWIWkMmjLbSicn21W6Zg==", "personal"=>{"user_id"=>"8", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (8, '魚', 'サカナ', 4, '2018-03-26 17:43:08', '2018-03-26 17:43:08')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/personals/6
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/personals/6" for 127.0.0.1 at 2018-03-27 02:43:08 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 6 LIMIT 1[0m
+  Rendering personals/show.html.erb within layouts/application
+  Rendered personals/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 57ms (Views: 47.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:46:17 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.4ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 241ms (Views: 225.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:46:19 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (36.5ms)
+  Rendered personals/new.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 101ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:46:42 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eIJUN7TODAOHEAW9DuZ2kd/amDwPmIhFeYIS8nLC82E2tBrA84FnmlY2MMjl/U1BsPO/a8Sl0PYIh8nSKnF2Kw==", "personal"=>{"user_id"=>"9", "name"=>"林檎", "kana"=>"リンゴ", "sex"=>"2", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:46:43 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yMtT77gUsjR1pC8GLq0a6g8pb0OIRG5AUDCyhBEtJ8pLOySlzKVcoIP10+zCzeT1Hoou4Gt/QGnVNhh2oWu+uA==", "personal"=>{"user_id"=>"9", "name"=>"林檎", "kana"=>"リンゴ", "sex"=>"2", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (9, '林檎', 'リンゴ', 2, '2018-03-26 17:46:43', '2018-03-26 17:46:43')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 3.6ms)
+
+
+  
+NameError (undefined local variable or method `home_mypage' for #<PersonalsController:0x007f8a972271c0>
+Did you mean?  home_mypage_url):
+  
+app/controllers/personals_controller.rb:39:in `block (2 levels) in create'
+app/controllers/personals_controller.rb:34:in `create'
+Started GET "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:47:00 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 21ms (ActiveRecord: 4.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Personal with 'id'=confirm):
+  
+app/controllers/personals_controller.rb:75:in `set_personal'
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:47:08 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 57ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:47:10 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (5.4ms)
+  Rendered personals/new.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 93ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:47:25 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxrkqJ2q1TuVIh2SaCe0pbTMSg3sETa5yrs9FkDO0lYRLKpf2uW+okQEKOeDPI912+VtWicsbgq7vuY2GH1XHA==", "personal"=>{"user_id"=>"10", "name"=>"蜜柑", "kana"=>"ミカン", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 45ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:47:27 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AB4igF41YXOC5a7HfCFh8sqzSrB6+1+BPD6fupKkid+D7lXKKoSP53S0Ui2QQZ/t2xALE5nAcai5ODVIIuIQrQ==", "personal"=>{"user_id"=>"10", "name"=>"蜜柑", "kana"=>"ミカン", "sex"=>"1", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (10, '蜜柑', 'ミカン', 1, '2018-03-26 17:47:27', '2018-03-26 17:47:27')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 02:47:27 +0900
+Processing by HomeController#mypage as HTML
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 02:47:47 +0900
+Processing by HomeController#mypage as HTML
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:47:58 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 57ms (Views: 48.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:48:01 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (6.1ms)
+  Rendered personals/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 70ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:48:13 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EWP3LVM4Ubc6ZmjaDywbNmx0jG5PadsduNry791tVIlfVbnaFHc6LutAXa/kNyDmA12rOYRUg67J3ynPhd7Rww==", "personal"=>{"user_id"=>"11", "name"=>"梨", "kana"=>"ナシ", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:48:15 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KWsorkQq4h1k6YERVTBrmszS7vMwxdpjHPEWeNFtVoWqm1/kMJsMiZK4ffu5UJWF3XGvUNP+9EqZ97yKYSvP9w==", "personal"=>{"user_id"=>"11", "name"=>"梨", "kana"=>"ナシ", "sex"=>"1", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (11, '梨', 'ナシ', 1, '2018-03-26 17:48:15', '2018-03-26 17:48:15')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 02:48:15 +0900
+Processing by HomeController#mypage as HTML
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 51ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 02:48:38 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 72ms (Views: 64.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 02:48:41 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (4.1ms)
+  Rendered personals/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 82ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 02:48:58 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rhWsGcHmerokb/C0QQGvfRAHAaMzE14MEyiTxs8tKOHgI+LuhqkRI/VJxcGqGpStfy4m9PguBr9iLUjml56tqw==", "personal"=>{"user_id"=>"12", "name"=>"羊羮", "kana"=>"ヨウカン", "sex"=>"3", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"26"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:49:00 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Me7iR1uaDsWAXtddDTbYYrmssJp4LdzeCzLobS+L/FWyHpUNLyvgUXYPK7fhViZ9qA/xOZsW8veONEKfn81lJw==", "personal"=>{"user_id"=>"12", "name"=>"羊羮", "kana"=>"ヨウカン", "sex"=>"3", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (12, '羊羮', 'ヨウカン', 3, '2018-03-26 17:49:00', '2018-03-26 17:49:00')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/personals_controller.rb:34:in `create'
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 02:49:21 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Me7iR1uaDsWAXtddDTbYYrmssJp4LdzeCzLobS+L/FWyHpUNLyvgUXYPK7fhViZ9qA/xOZsW8veONEKfn81lJw==", "personal"=>{"user_id"=>"12", "name"=>"羊羮", "kana"=>"ヨウカン", "sex"=>"3", "birth"=>"{1=>2018, 2=>3, 3=>26}"}, "commit"=>"create!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (12, '羊羮', 'ヨウカン', 3, '2018-03-26 17:49:21', '2018-03-26 17:49:21')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 17ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 02:49:21 +0900
+Processing by HomeController#mypage as HTML
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+

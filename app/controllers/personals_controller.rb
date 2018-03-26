@@ -17,6 +17,11 @@ class PersonalsController < ApplicationController
     @personal = Personal.new
   end
 
+  def confirm
+    @personal = Personal.new(personal_params) # <=POSTされたパラメータを取得
+    render :new if @personal.invalid? # <=バリデーションチェックNGなら戻す
+  end
+
   # GET /personals/1/edit
   def edit
   end
@@ -27,7 +32,10 @@ class PersonalsController < ApplicationController
     @personal = Personal.new(personal_params)
 
     respond_to do |format|
-      if @personal.save
+      if params[:back]
+        format.html { render :new }
+        format.json { render json: @personal.errors, status: :unprocessable_entity }
+      elsif @personal.save
         format.html { redirect_to @personal, notice: 'Personal was successfully created.' }
         format.json { render :show, status: :created, location: @personal }
       else

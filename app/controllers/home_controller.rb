@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def mypage
-    @str "mypage"
+    @str  = "mypage"
   end
 end

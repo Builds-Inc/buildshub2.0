@@ -36,8 +36,8 @@ class PersonalsController < ApplicationController
         format.html { render :new }
         format.json { render json: @personal.errors, status: :unprocessable_entity }
       elsif @personal.save
-        format.html { redirect_to @personal, notice: 'Personal was successfully created.' }
-        format.json { render :show, status: :created, location: @personal }
+        format.html { redirect_to home_mypage_path, notice: 'Personal was successfully created.' }
+        format.json { render "home/mypage", status: :created, location: @personal }
       else
         format.html { render :new }
         format.json { render json: @personal.errors, status: :unprocessable_entity }

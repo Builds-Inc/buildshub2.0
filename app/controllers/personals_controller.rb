@@ -50,8 +50,8 @@ class PersonalsController < ApplicationController
   def update
     respond_to do |format|
       if @personal.update(personal_params)
-        format.html { redirect_to @personal, notice: 'Personal was successfully updated.' }
-        format.json { render :show, status: :ok, location: @personal }
+        format.html { redirect_to home_mypage_path, notice: 'Personal was successfully updated.' }
+        format.json { render "home/mypage", status: :ok, location: @personal }
       else
         format.html { render :edit }
         format.json { render json: @personal.errors, status: :unprocessable_entity }
@@ -72,7 +72,7 @@ class PersonalsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_personal
-      @personal = Personal.find(params[:id])
+      @personal = Personal.find_by(user_id: current_user.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

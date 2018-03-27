@@ -16,7 +16,9 @@ Rails.application.routes.draw do
 
   resources :personals do
     collection do
-      post 'confirm'
+      post  'confirm'
+      patch 'confirm'
+      put   'confirm'
     end
   end
 

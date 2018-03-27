@@ -26,4 +26,4 @@
 </p>
 
 <%= link_to 'Edit', edit_personal_path(@personal) %>
-<%= link_to '退会', {:controller => "users/registrations", :action => "destroy"}, :confirm => "Are you sure?", :method => :delete %>
+<%= link_to '退会', {:controller => "users/registrations", :action => "destroy"}, :method => :delete, data: {confirm: 'Are you sure?' } %>

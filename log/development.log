@@ -5533,3 +5533,563 @@ Processing by HomeController#mypage as HTML
 Completed 200 OK in 129ms (Views: 118.9ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 20:56:44 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 436ms (Views: 369.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 20:58:18 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 313ms (Views: 238.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 20:58:27 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 69ms (Views: 52.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/personals/5/edit" for 127.0.0.1 at 2018-03-27 20:58:29 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPersonal Load (0.7ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 5 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (47.7ms)
+  Rendered personals/edit.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 107ms (Views: 100.1ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 20:58:52 +0900
+Processing by PersonalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AasbrtNtfJxsWIVpCWLu3ZtaJAgd3r7NkvofX6b+DVXln5wTn4dVIkPmw40hk3zORq9YilHwJ2H3ZhXXemSKyA==", "personal"=>{"user_id"=>"5", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!", "id"=>"confirm"}
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Personal with 'id'=confirm):
+  
+app/controllers/personals_controller.rb:75:in `set_personal'
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:00:52 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 33.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/personals/5/edit" for 127.0.0.1 at 2018-03-27 21:00:56 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 5 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (6.6ms)
+  Rendered personals/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:01:18 +0900
+Processing by PersonalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ej1dvy0DURv1vxIM/rXaigcHi9cMXzw5TEsRHI6hjTT2CdoCYel4pdoBVOjWREiZ2vL3VUBxpZUp1xuUUjsKqQ==", "personal"=>{"user_id"=>"5", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!", "id"=>"confirm"}
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Personal with 'id'=confirm):
+  
+app/controllers/personals_controller.rb:75:in `set_personal'
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:36:51 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.4ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 85ms (Views: 77.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/personals/5/edit" for 127.0.0.1 at 2018-03-27 21:37:15 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 5 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (5.6ms)
+  Rendered personals/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 99ms (Views: 94.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:37:25 +0900
+Processing by PersonalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jYmqqj6Uh0V/mxdpijFbGmUwUgGZvtU5HuEJLTPTvFVpvS0Xcn6u+1AlUY2iwMkJuMUug9WQTJV7fQOl70k7yA==", "personal"=>{"user_id"=>"5", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!", "id"=>"confirm"}
+  [1m[36mPersonal Load (0.4ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Personal with 'id'=confirm):
+  
+app/controllers/personals_controller.rb:75:in `set_personal'
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:40:14 +0900
+Processing by PersonalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jYmqqj6Uh0V/mxdpijFbGmUwUgGZvtU5HuEJLTPTvFVpvS0Xcn6u+1AlUY2iwMkJuMUug9WQTJV7fQOl70k7yA==", "personal"=>{"user_id"=>"5", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!", "id"=>"confirm"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.8ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `personals` SET `birth` = '2018-03-27', `updated_at` = '2018-03-27 12:40:14' WHERE `personals`.`id` = 5[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/personals/5
+Completed 302 Found in 61ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/personals/5" for 127.0.0.1 at 2018-03-27 21:40:14 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering personals/show.html.erb within layouts/application
+  Rendered personals/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 72ms (Views: 63.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:40:38 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.8ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 86ms (Views: 76.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/personals/5/edit" for 127.0.0.1 at 2018-03-27 21:40:40 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (5.0ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (6.9ms)
+  Rendered personals/edit.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 71ms (Views: 59.4ms | ActiveRecord: 5.6ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:40:42 +0900
+Processing by PersonalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UsGAGzJPihTsaT/U0mAe0JG6ycejvGEIoPHAbyTjz8u29QemfqWjqsPXeTD6kYzDTE+1Re+S+KTFbcrn+HlIVg==", "personal"=>{"user_id"=>"5", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!", "id"=>"confirm"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.4ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/personals/5
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/personals/5" for 127.0.0.1 at 2018-03-27 21:40:42 +0900
+Processing by PersonalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering personals/show.html.erb within layouts/application
+  Rendered personals/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:42:02 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 98ms (Views: 66.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/personals/5/edit" for 127.0.0.1 at 2018-03-27 21:42:05 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (11.0ms)
+  Rendered personals/edit.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 81ms (Views: 74.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:42:07 +0900
+Processing by PersonalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NcSu9iT57tvU8luR7Kd65g/BOjIyosl1ZXUXYTJ/GYrR8ClLaBPHZftMHXXEVuj10jRGsH6MUNkA6R3p7uWeFw==", "personal"=>{"user_id"=>"5", "name"=>"いけぽん", "kana"=>"イケポン", "sex"=>"6", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!", "id"=>"confirm"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:42:07 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 5 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 54ms (Views: 46.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 21:44:39 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 66ms (Views: 59.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-27 21:44:42 +0900
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+L8JxiPnpLH0775LowxCzkrCxnI1xNyp8itGmanttQw4wCJv4sucGxKKgyn7I0ypEU8yDs/txCqG2jrd6EdoSA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 21:44:42 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-27 21:44:44 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-27 21:45:08 +0900
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xoXEFU01uQid9K53vsb1+9Mzz0yrfoUEXasNhWHSefThrb3ns/bEhzH1hYf7OyfO3lrAP1Loq8tBe8Wb5COOQQ==", "user"=>{"email"=>"fff@fff", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'fff@fff' LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('fff@fff', '$2a$11$a4az5zUQj10hzrhDccAjHeZtf9jrhjrm6/W.C6WrnVEIFekYcclaS', 'o82pnZCfwZUy9zxwthCT', '2018-03-27 12:45:08', '2018-03-27 12:45:08', '2018-03-27 12:45:08')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/confirmation_instructions.html.erb
+  Rendered users/mailer/confirmation_instructions.html.erb (1.0ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 411.0ms
+Sent mail to fff@fff (30.2ms)
+Date: Tue, 27 Mar 2018 21:45:09 +0900
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: fff@fff
+Message-ID: <5aba3cd53610d_30843fe14c6aabb8656e8@Jumpei-Sogawa-no-MacBook-Air.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome fff@fff!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=o82pnZCfwZUy9zxwthCT">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1100ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 21:45:09 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener" for 127.0.0.1 at 2018-03-27 21:45:19 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/jumpeisogawa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/letter_opener_web-1.3.3/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (4.3ms)
+Completed 200 OK in 89ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1522154709_2292118_8ca9f13/rich" for 127.0.0.1 at 2018-03-27 21:45:21 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1522154709_2292118_8ca9f13", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=o82pnZCfwZUy9zxwthCT" for 127.0.0.1 at 2018-03-27 21:45:23 +0900
+Processing by Users::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"o82pnZCfwZUy9zxwthCT"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'o82pnZCfwZUy9zxwthCT' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE `users` SET `confirmed_at` = '2018-03-27 12:45:23', `updated_at` = '2018-03-27 12:45:23' WHERE `users`.`id` = 6[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 12ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-27 21:45:23 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-27 21:45:30 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BanrhZlio6+XyEp59FISBXOxsfcmaXvWyKgOJkOEotYNTiV5ZPvgnfLizeiEbQ5/nAscyLDVqVE9Sndh5l/yXw==", "user"=>{"email"=>"fff@fff", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'fff@fff' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-27 12:45:30', `last_sign_in_at` = '2018-03-27 12:45:30', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2018-03-27 12:45:30' WHERE `users`.`id` = 6[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 261ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 21:45:30 +0900
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered landing/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/personals/new" for 127.0.0.1 at 2018-03-27 21:45:46 +0900
+Processing by PersonalsController#new as HTML
+  Rendering personals/new.html.erb within layouts/application
+  Rendered personals/_form.html.erb (3.9ms)
+  Rendered personals/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 50ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:46:25 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RdQuD+4jFNXmw85YqsPZZ0cgOhotFhUrggezoFgSQtIFr5rkabFlXMn8Kist+Qg3OhDgUgEd7iGPFdww1hZzIw==", "personal"=>{"user_id"=>"17", "name"=>"fff", "kana"=>"fff", "sex"=>"1", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 50ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 21:46:35 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yaVyi7hdXkig8u7sT64Ipyx0bioMPVhWsw2+XkCnyRGJ3sZgP88vwY/NCp/IlNn3UUS0YiA2o1y+H9HOzqP44A==", "personal"=>{"user_id"=>"17", "name"=>"fff", "kana"=>"fff", "sex"=>"1", "birth"=>"{1=>2018, 2=>3, 3=>27}"}, "commit"=>"create!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (17, 'fff', 'fff', 1, '2018-03-27 12:46:35', '2018-03-27 12:46:35')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:46:35 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 49ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/personals/6/edit" for 127.0.0.1 at 2018-03-27 21:46:45 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.6ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (5.5ms)
+  Rendered personals/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 60ms (Views: 53.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/personals" for 127.0.0.1 at 2018-03-27 21:46:48 +0900
+Processing by PersonalsController#index as HTML
+  Rendering personals/index.html.erb within layouts/application
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT `personals`.* FROM `personals`[0m
+  Rendered personals/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:46:54 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.2ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 65ms (Views: 57.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/personals/6/edit" for 127.0.0.1 at 2018-03-27 21:46:58 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (9.6ms)
+  Rendered personals/edit.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 78ms (Views: 69.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:47:00 +0900
+Processing by PersonalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xowBmegU7LT+9CcZQTppuwq06flyziAu8vO5dNX19X7EajFpMAbQKnR/RrkTib+4cyIMprakYgiZmQomuQT6mw==", "personal"=>{"user_id"=>"6", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!", "id"=>"confirm"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `personals` SET `birth` = '2018-03-27', `updated_at` = '2018-03-27 12:47:00' WHERE `personals`.`id` = 6[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:47:00 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.4ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 37.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/personals/6/edit" for 127.0.0.1 at 2018-03-27 21:56:17 +0900
+  [1m[35m (3.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (49.9ms)
+  Rendered personals/edit.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 389ms (Views: 300.0ms | ActiveRecord: 11.6ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:56:19 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VeFauCxSsM8rQkU4B2+PKvjNV5/r6i10KvAPdysWxINXB2pI9ECMUaHJJJhV3FkpgVuywC+Ab1JBmrwlR+fLZg==", "personal"=>{"user_id"=>"6", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 21:56:24 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tikwtr8Em0WwXDzm7lFI3xa1thkyjkaKNLHYg9Ejzsj2UoRdOJbqzJ9j2JVpa5mPa4VsUR6FvYA5o7cTXyf/OQ==", "personal"=>{"user_id"=>"6", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth"=>"{1=>2018, 2=>3, 3=>27}"}, "commit"=>"create!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (6, '魚', 'サカナ', 4, '2018-03-27 12:56:24', '2018-03-27 12:56:24')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 10ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:56:24 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/personals/6/edit" for 127.0.0.1 at 2018-03-27 21:57:37 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (4.1ms)
+  Rendered personals/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 76ms (Views: 68.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:57:40 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fFEbCLaeo77ZwkhqscfA5Sy5vu3luzokfHJYjx1KAMx+tyv4boyfIFNJKcrjdBbmVS9bsiHReAIXGOvdcbsPKQ==", "personal"=>{"user_id"=>"6", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 21:57:43 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KngRDJKFxSXAfXhax3LBNGDa88uciH+2PLuNUGM64CxqA6XnFRe0rO9CnClASBBkHeopg7CDhLwxqeLA7T7R3Q==", "personal"=>{"user_id"=>"6", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth"=>"{1=>2018, 2=>3, 3=>27}"}, "commit"=>"Create Personal"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (6, '魚', 'サカナ', 4, '2018-03-27 12:57:43', '2018-03-27 12:57:43')[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 17ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:57:43 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 89ms (Views: 82.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:57:58 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 83ms (Views: 77.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/personals/6/edit" for 127.0.0.1 at 2018-03-27 21:58:00 +0900
+Processing by PersonalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.3ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering personals/edit.html.erb within layouts/application
+  Rendered personals/_form.html.erb (8.2ms)
+  Rendered personals/edit.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 76ms (Views: 69.1ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/personals/confirm" for 127.0.0.1 at 2018-03-27 21:58:02 +0900
+Processing by PersonalsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LmeJxFh9p2uT0ig1xFOTRXGFePcQuCfkpKA0KLcqLbgsgbk0gG+b9RlZSZWW4EVGCBOdqNTSZcLPyod629siXQ==", "personal"=>{"user_id"=>"6", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth(1i)"=>"2018", "birth(2i)"=>"3", "birth(3i)"=>"27"}, "commit"=>"next!"}
+  Rendering personals/confirm.html.erb within layouts/application
+  Rendered personals/confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/personals" for 127.0.0.1 at 2018-03-27 21:58:05 +0900
+Processing by PersonalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NI4zyCMAO7qHXZtQOP8U5CX0wJ89invbEkL6BkyeRZZ09YcjpJJKM6hifyO/xcW0WMQa1xGBgNEfUJWWwpp0Zw==", "personal"=>{"user_id"=>"6", "name"=>"魚", "kana"=>"サカナ", "sex"=>"4", "birth"=>"{1=>2018, 2=>3, 3=>27}"}, "commit"=>"create!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO `personals` (`user_id`, `name`, `kana`, `sex`, `created_at`, `updated_at`) VALUES (6, '魚', 'サカナ', 4, '2018-03-27 12:58:05', '2018-03-27 12:58:05')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/mypage
+Completed 302 Found in 9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/home/mypage" for 127.0.0.1 at 2018-03-27 21:58:05 +0900
+Processing by HomeController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPersonal Load (0.5ms)[0m  [1m[34mSELECT  `personals`.* FROM `personals` WHERE `personals`.`user_id` = 6 LIMIT 1[0m
+  Rendering home/mypage.html.erb within layouts/application
+  Rendered home/mypage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 39.8ms | ActiveRecord: 0.9ms)
+
+
